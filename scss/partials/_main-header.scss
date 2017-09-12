@@ -1,0 +1,106 @@
+.main-header {
+    height: 40px;
+    width: 100%;
+    background: $colorTertiary;
+
+}
+.container {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.main-logo {
+    font-size: 16px;
+    line-height: 40px;
+    a {
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: bold;
+        color: $colorPrimary;
+    }
+}
+
+.main-nav {
+    font-size: 15px;
+    word-spacing: 2px;
+    li {
+        display: inline-block;
+        margin: 0 20px;
+        position: relative;
+        a {
+            color: $colorPrimary;
+            text-decoration: none;
+            text-transform: none;
+            text-transform: uppercase;
+            font-weight: bold;
+            transition: 0.5s color;
+
+            &:hover {
+                color: $colorSecondary;
+            }
+        }
+    }
+}
+
+//submenu
+.main-nav .main-nav-submenu {
+    position: absolute;
+    top: 35px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background: #000;
+    padding: 10px 0;
+    opacity: 0;
+    visibility: hidden;
+    text-align: left;
+    transition: 0.5s opacity;
+    z-index: 10000;
+}
+
+.main-nav .main-nav-submenu:before {
+    content: "";
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-bottom-color: #000;
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.main-nav .main-nav-submenu:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: -15px;
+    width: 100%;
+    height: 15px;
+}
+
+
+// .main-nav li:hover .main-nav-submenu {
+//     opacity: 1;
+//     visibility: visible;
+// }
+//
+// .main-nav li:hover > a {
+//     color: #27C7AB;
+// }
+
+.main-nav .main-nav-submenu li {
+    display: block;
+    text-align: left;
+    padding: 0;
+    margin: 0;
+}
+
+.main-nav .main-nav-submenu li a {
+    height: 30px;
+    line-height: 30px;
+    text-transform: none;
+    font-weight: normal;
+    padding: 0 20px;
+}

@@ -1,0 +1,15 @@
+@import "partials/_reset.scss";
+@import "_grid.scss";
+@import "_variables.scss";
+@import "_global_classes.scss";
+@import "partials/_main-header.scss";
+@import "partials/_main-slider.scss";
+@import "partials/_boxes-section.scss";
+@import "partials/_prices-section.scss";
+@import "partials/_contact-section.scss";
+@import "partials/_footer.scss";
+
+
+body {
+    font-family: $fontPrimary;
+}

@@ -1,0 +1,92 @@
+.main-slider {
+    height: 538px;
+    width: 100%;
+    background: #FCFCFC; /* Old browsers */
+    background: -moz-linear-gradient(top, #FCFCFC 37%, #F2F5F6 72%, #CECECE 98%, #CECECE 100%, #F2F5F6 100%, #CECECE 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #FCFCFC 37%, #F2F5F6 72%, #CECECE 98%, #CECECE 100%, #F2F5F6 100%, #CECECE 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #FCFCFC 37%, #F2F5F6 72%, #CECECE 98%, #CECECE 100%, #F2F5F6 100%, #CECECE 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fcfcfc', endColorstr='#cecece', GradientType=0); /* IE6-9 */
+
+    .row {
+        width: 100%;
+        height: 100%;
+
+            .left, .right {
+                width: 100%;
+                height: 538px;
+                color: #38C3AD;
+                font-weight: 400;
+                font-size: 80px;
+                display: flex;
+                align-items: center;
+                background: none;
+                border: 0;
+                padding: 0;
+                transition: 0.5s all;
+
+                &:hover {
+                    color: $colorTertiary;
+                }
+
+                &:focus {
+                    outline: none;
+                }
+            }
+
+            .left {
+                justify-content: flex-start;
+            }
+            .right {
+                justify-content: flex-end;
+            }
+
+
+            .slide-image {
+                width: 100%;
+                height: 538px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                img {
+                    width: 100%;
+                    height: 378px;
+                }
+            }
+
+            .slide-content {
+                width: 100%;
+                height: 538px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                .slide-title {
+                    font-size: 43px;
+                    font-weight: 400;
+                }
+
+                .slide-text {
+                    text-align: center;
+                    margin: 30px 0;
+                }
+            }
+    }
+}
+
+
+/*slider*/
+.main-slider .slider {
+    .slide.active {
+        display: block;
+
+        .red-element {
+            color: #F1000D;
+        }
+    }
+    .slide {
+        display: none;
+    }
+}
