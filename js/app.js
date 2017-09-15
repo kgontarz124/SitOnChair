@@ -104,6 +104,10 @@ var allLabels = document.querySelectorAll(".list_label");
 var sum = document.querySelector(".sum_label");
 var costs = document.querySelector(".panel_right").children;
 var totalSum = 0;
+var sumType = 0;
+var sumColor = 0;
+var sumTransport = 0;
+var sumPattern = 0;
 
 var  typeOfChairLabel = allLabels[0];
 var choiseTypeOfChair = document.querySelector(".panel_left h4");
@@ -113,13 +117,15 @@ var typeOfChair = panels[0].children;
 
 for (var i=0; i<typeOfChair.length; i++) {
     typeOfChair[i].addEventListener("click", function () {
-        typeOfChairLabel.innerText = this.innerText;
-        choiseTypeOfChair.innerText = this.innerText;
-        priceTypeOfChair.innerText = this.dataset.price;
-        totalSum += Number(priceTypeOfChair.innerText);
-        sum.innerText = "SUMA : " + totalSum;
+            typeOfChairLabel.innerText = this.innerText;
+            choiseTypeOfChair.innerText = this.innerText;
+            priceTypeOfChair.innerText = this.dataset.price;
+            sumType = Number(priceTypeOfChair.innerText);
+            totalSum = sumType + sumColor + sumPattern + sumTransport;
+            sum.innerText = "SUMA : " + totalSum;
     });
 }
+
 
 //kolor fotela
 var  colorOfChairLabel = allLabels[1];
@@ -129,11 +135,12 @@ var colorOfChair = panels[1].children;
 
 for (var i=0; i<typeOfChair.length; i++) {
     colorOfChair[i].addEventListener("click", function () {
-        colorOfChairLabel.innerText = this.innerText;
-        choiseColorOfChair.innerText = this.innerText;
-        priceColorOfChair.innerText = "0";
-        totalSum += Number(priceColorOfChair.innerText);
-        sum.innerText = "SUMA : " + totalSum;
+            colorOfChairLabel.innerText = this.innerText;
+            choiseColorOfChair.innerText = this.innerText;
+            priceColorOfChair.innerText = "0";
+            sumColor = Number(priceColorOfChair.innerText);
+            totalSum = sumType + sumColor + sumPattern + sumTransport;
+            sum.innerText = "SUMA : " + totalSum;
     });
 }
 
@@ -145,11 +152,12 @@ var patternOfChair = panels[2].children;
 
 for (var i=0; i<patternOfChair.length; i++) {
     patternOfChair[i].addEventListener("click", function () {
-        patternOfChairLabel.innerText = this.innerText;
-        choisePatternOfChair.innerText = this.innerText;
-        pricePatternOfChair.innerText = this.dataset.price;
-        totalSum += Number(pricePatternOfChair.innerText);
-        sum.innerText = "SUMA : " + totalSum;
+            patternOfChairLabel.innerText = this.innerText;
+            choisePatternOfChair.innerText = this.innerText;
+            pricePatternOfChair.innerText = this.dataset.price;
+            sumPattern = Number(pricePatternOfChair.innerText);
+            totalSum = sumType + sumColor + sumPattern + sumTransport;
+            sum.innerText = "SUMA : " + totalSum;
     });
 }
 
@@ -162,14 +170,14 @@ checkboxTransport.addEventListener("click", function () {
     if (this.checked) {
         choiseTransport.innerText = "Transport";
         priceTransport.innerText = this.dataset.price;
-        totalSum += Number(priceTransport.innerText);
+        sumTransport = Number(priceTransport.innerText);
+        totalSum = sumType + sumColor + sumPattern + sumTransport;
         sum.innerText = "SUMA : " + totalSum;
     } else {
+        sumTransport = 0;
         choiseTransport.innerText = "";
         priceTransport.innerText = "";
+        totalSum = sumType + sumColor + sumPattern;
+        sum.innerText = "SUMA : " + totalSum;
     }
 });
-
-
-
-sum.innerText = "SUMA : " + totalSum;
