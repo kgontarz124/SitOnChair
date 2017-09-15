@@ -7,9 +7,10 @@
     background: linear-gradient(to bottom, #FCFCFC 37%, #F2F5F6 72%, #CECECE 98%, #CECECE 100%, #F2F5F6 100%, #CECECE 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fcfcfc', endColorstr='#cecece', GradientType=0); /* IE6-9 */
 
+    .row {
+        width: 100%;
 
             .left, .right {
-                width: 10%;
                 height: 538px;
                 color: #38C3AD;
                 font-weight: 400;
@@ -31,7 +32,6 @@
             }
 
             .slider {
-                width: 80%;
                 height: 538px;
 
 
@@ -40,8 +40,8 @@
                     height: 100%;
 
                     .slide-image {
-                        width: 50%;
-                        height: 100%;
+                        width: 40%;
+                        height: 538px;
                         display: flex;
                         flex-direction: column;
                         justify-content: center;
@@ -49,18 +49,19 @@
                         float: left;
 
                         img {
-                            width: 100%;
-                            height: 378px;
+                            max-width: 100%;
+                            height: auto;
                         }
                     }
 
                     .slide-content {
-                        width: 50%;
-                        height: 100%;
+                        width: 60%;
+                        height: 538px;
                         display: flex;
                         flex-direction: column;
                         justify-content: center;
                         align-items: center;
+                        float: left;
 
                         .slide-title {
                             font-size: 43px;
@@ -72,7 +73,7 @@
                             margin: 30px 0;
                         }
                 }
-            }
+        }    }
     }
 }
 

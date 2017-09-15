@@ -14,12 +14,11 @@
 //GRID
 //==========================================
 $column : 12;
-$gutter : 0;
+$gutter : 10px;
 
 .row {
     margin-bottom:0;
-    // margin-left: -10px;
-    // margin-right: -10px;  //<----trzeba dodać dla containera maprgin left i right po 10px
+    
 
     [class*="col-"] {
         float:none;
