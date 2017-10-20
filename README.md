@@ -7,7 +7,7 @@ This is an online store with chairs. Technology used:
 - HTML
 - CSS
 
-![Main Header](https://github.com/kgontarz124/SitOnChair/master/images/pscreenshot_1.png)
+[![Main Header](https://github.com/kgontarz124/SitOnChair/raw/master/images/pscreenshot_1.png)](https://github.com/kgontarz124/SitOnChair/raw/master/images/pscreenshot_1.png)
 
 ![Choise Field](/images/pscreenshot_2.png)
 
